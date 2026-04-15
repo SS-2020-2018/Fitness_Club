@@ -13,6 +13,7 @@ body {
 
 .main-container {
     display: grid;
+    width: 100%;
     max-width: 1200px;
     grid-template-columns: 350px 1fr;
     padding: 40px;
@@ -21,39 +22,134 @@ body {
 }
 
 .sidebar {
-    height: 90vh;
+    min-height: 90vh;
     background-color: #2a2e2e;
     border: 1px solid #3a3a3a;
     border-radius: 16px;
 }
-.main-content{
-    height:90vh ;
+
+.main-content {
+    min-height: 90vh;
     background-color: #2a2e2e;
     border: 1px solid #3a3a3a;
     border-radius: 10px;
 }
-.profile-picture{
+
+.profile-picture {
     text-align: center;
 }
-.profile-picture img{
+
+.profile-picture img {
     height: 120px;
     width: 120px;
     border-radius: 50%;
-    border: 1 px solid #3a3a3a;
+    border: 1px solid #3a3a3a;
     margin-top: 10px;
 }
-.profile-picture h2{
+
+.profile-picture h2 {
     font-size: 1.5rem;
     font-weight: 700;
     color: #c0c0c0;
 }
-.profile-picture p{
+
+.profile-picture p {
     background-color: #1e1e1e;
-    padding:5px 15px;
-    color: #FFBF00;
+    padding: 5px 15px;
+    color: #ffbf00;
     border: 1px solid #3a3a3a;
     font-size: 0.8rem;
     border-radius: 8px;
     display: inline-block;
-    margin-top: 10px
+    margin-top: 10px;
+}
+
+.contact {
+    /*line*/
+    margin: 30px;
+    border-top: 2px solid #3a3a3a;
+    /*contact info*/
+    padding-top: 20px;
+}
+.label {
+    font-weight: 500;
+    font-size: 0.8rem;
+    color: #a0a0a0;
+}
+.value {
+    color: #e0e0e0;
+}
+.contact a {
+    color: #e0e0e0;
+    text-decoration: none;
+}
+.contact a:visited {
+    color: #e0e0e0;
+}
+.email,.phone,.location{
+    margin-bottom: 15px;
+}
+/* Social media icons */
+.social-media {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 30px;
+    padding: 20px;
+    border-top: 2px solid #3a3a3a;
+}
+/* Social media icon styles */
+.social-media a {
+    color: #a0a0a0;
+    font-size: 1.5rem;
+}
+
+/* Tablet and below */
+@media (max-width: 992px) {
+    .main-container {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        padding: 24px;
+    }
+
+    .sidebar,
+    .main-content {
+        min-height: auto;
+    }
+
+    .main-content {
+        min-height: 55vh;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .main-container {
+        padding: 14px;
+        gap: 16px;
+    }
+
+    .profile-picture h2 {
+        font-size: 1.25rem;
+    }
+
+    .profile-picture p {
+        font-size: 0.75rem;
+        padding: 4px 12px;
+    }
+
+    .contact,
+    .social-media {
+        margin: 18px;
+        padding-top: 14px;
+    }
+
+    .social-media {
+        gap: 20px;
+        padding: 14px 0 0;
+    }
+
+    .social-media a {
+        font-size: 1.25rem;
+    }
 }
