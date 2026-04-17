@@ -83,10 +83,6 @@ body {
     color: #a0a0a0;
 }
 
-.value {
-    color: #e0e0e0;
-}
-
 .contact a {
     color: #e0e0e0;
     text-decoration: none;
@@ -100,6 +96,11 @@ body {
 .phone,
 .location {
     margin-bottom: 15px;
+}
+
+.contact a.value:hover,
+.contact p.value:hover {
+    color: #ffbf00;
 }
 
 /* Social media icons */
@@ -116,6 +117,10 @@ body {
 .social-media a {
     color: #a0a0a0;
     font-size: 1.5rem;
+}
+
+.social-media a:hover {
+    color: #ffbf00;
 }
 
 /* Tablet and below */
@@ -199,8 +204,8 @@ nav a {
     padding-bottom: 5px;
 }
 
-.active,
-nav a:hover {
+nav a.active,
+#navigation a:hover {
     color: #ffbf00;
     border-bottom: 2px solid #ffbf00;
 }
@@ -229,14 +234,16 @@ nav a:hover {
     text-align: justify;
 }
 
-#chest {
+#chest,
+#back {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: 18px;
     margin-top: 18px;
 }
 
-#chest h3 {
+#chest h3,
+#back h3 {
     grid-column: 1 / -1;
     color: #e0e0e0;
     font-size: 1.25rem;
@@ -272,25 +279,33 @@ nav a:hover {
     font-size: 1rem;
     font-weight: 600;
 }
-.return{
-    display: inline-block;
-    margin-top: 20px;
+
+.return {
+    display: block;
+    width: fit-content;
+    margin: 20px 0 0 auto;
     padding: 10px 20px;
     background-color: #ffbf00;
     color: #1e1e1e;
     border-radius: 8px;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
-.return a{
+
+.return a {
     color: #1e1e1e;
     text-decoration: none;
 }
+
 .return:hover {
     background-color: #e0a800;
-    color: #fff;
+    transform: translateY(-2px);
+    cursor: pointer;
 }
+
 @media (max-width: 600px) {
-    #chest {
+
+    #chest,
+    #back {
         grid-template-columns: 1fr;
         gap: 14px;
     }
