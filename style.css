@@ -235,7 +235,10 @@ nav a.active,
 }
 
 #chest,
-#back {
+#back,
+#legs,
+#arm,
+#shoulders {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: 18px;
@@ -243,7 +246,10 @@ nav a.active,
 }
 
 #chest h3,
-#back h3 {
+#legs h3,
+#back h3,
+#arm h3,
+#shoulders h3 {
     grid-column: 1 / -1;
     color: #e0e0e0;
     font-size: 1.25rem;
@@ -257,12 +263,14 @@ nav a.active,
     border-radius: 16px;
     padding: 12px;
     text-align: center;
+    cursor: pointer;
     transition: transform 0.25s ease, border-color 0.25s ease;
 }
 
 .item:hover {
-    transform: translateY(-4px);
+    transform: translateY(-4px) scale(1.02);
     border-color: #ffbf00;
+    cursor: pointer;
 }
 
 .item img {
