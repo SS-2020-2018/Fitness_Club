@@ -238,13 +238,14 @@ nav a.active,
 #back,
 #legs,
 #arm,
+#cardio,
 #shoulders {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: 18px;
     margin-top: 18px;
 }
-
+#cardio h3,
 #chest h3,
 #legs h3,
 #back h3,
