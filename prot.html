@@ -7,6 +7,7 @@
     <title>Protfolio</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <script src="script.js"></script>
 </head>
 
 <body>
@@ -253,9 +254,41 @@
                     <div class="return">
                         <a href="#navigation">Return to Navigation</a>
                     </div>
-                    <!-- Equipment Section -->
-                    <div id="equipment">
+                    <!-- Calculate BMI -->
+                    <div id="bmi">
+                        <h2 class="heading">Calculate BMI</h2>
+                        <div class="line"></div>
+                        <div class="bmi-card">
+                            <form id="bmi-form" class="bmi-form">
+                                <div class="bmi-grid">
+                                    <div class="bmi-field">
+                                        <label for="weight">Weight (kg)</label>
+                                        <input type="number" id="weight" name="weight" min="1" step="0.1"
+                                            placeholder="e.g. 70" required>
+                                    </div>
+                                    <div class="bmi-field">
+                                        <label for="height">Height (cm)</label>
+                                        <input type="number" id="height" name="height" min="1" step="0.1"
+                                            placeholder="e.g. 175" required>
+                                    </div>
+                                </div>
+                                <button type="submit" class="bmi-button">Calculate BMI</button>
+                            </form>
 
+                            <div id="bmi-result" class="bmi-result" aria-live="polite">
+                                <p>Enter your weight and height to see your BMI.</p>
+                            </div>
+
+                            <div class="bmi-legend">
+                                <span>Underweight: below 18.5</span>
+                                <span>Normal: 18.5 - 24.9</span>
+                                <span>Overweight: 25 - 29.9</span>
+                                <span>Obese: 30 and above</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="return">
+                        <a href="#navigation">Return to Navigation</a>
                     </div>
                     <!-- Join Us Section -->
                     <div id="join-us">
@@ -263,7 +296,6 @@
                     </div>
                 </div>
             </div>
-
 </body>
 
 </html>

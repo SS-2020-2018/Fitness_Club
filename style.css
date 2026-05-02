@@ -213,7 +213,8 @@ nav a.active,
 #about,
 #exercises,
 #equipment,
-#join-us {
+#join-us,
+#bmi {
     padding: 20px;
     max-width: 1200px;
 }
@@ -245,6 +246,7 @@ nav a.active,
     gap: 18px;
     margin-top: 18px;
 }
+
 #cardio h3,
 #chest h3,
 #legs h3,
@@ -311,11 +313,116 @@ nav a.active,
     cursor: pointer;
 }
 
+.bmi-card {
+    background: #1e1e1e;
+    border: 1px solid #3a3a3a;
+    border-radius: 16px;
+    padding: 20px;
+    max-width: 720px;
+}
+
+.bmi-form {
+    display: grid;
+    gap: 16px;
+}
+
+.bmi-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+}
+
+.bmi-field {
+    display: grid;
+    gap: 8px;
+}
+
+.bmi-field label {
+    color: #e0e0e0;
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+.bmi-field input {
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 10px;
+    border: 1px solid #3a3a3a;
+    background: #2a2e2e;
+    color: #e0e0e0;
+    font: inherit;
+}
+
+.bmi-field input:focus {
+    outline: none;
+    border-color: #ffbf00;
+    box-shadow: 0 0 0 3px rgba(255, 191, 0, 0.15);
+}
+
+.bmi-button {
+    justify-self: start;
+    border: none;
+    border-radius: 10px;
+    background: #ffbf00;
+    color: #1e1e1e;
+    padding: 12px 20px;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.25s ease, transform 0.25s ease;
+}
+
+.bmi-button:hover {
+    background: #e0a800;
+    transform: translateY(-2px);
+}
+
+.bmi-result {
+    margin-top: 20px;
+    padding: 16px;
+    border-radius: 12px;
+    border: 1px solid #3a3a3a;
+    background: #2a2e2e;
+    color: #e0e0e0;
+}
+
+.bmi-result strong {
+    display: block;
+    color: #ffbf00;
+    font-size: 1.1rem;
+    margin-bottom: 4px;
+}
+
+.bmi-legend {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 10px;
+    margin-top: 16px;
+    color: #a0a0a0;
+    font-size: 0.9rem;
+}
+
+.bmi-legend span {
+    padding: 10px 12px;
+    border: 1px solid #3a3a3a;
+    border-radius: 10px;
+    background: #2a2e2e;
+}
+
 @media (max-width: 600px) {
 
     #chest,
     #back {
         grid-template-columns: 1fr;
         gap: 14px;
+    }
+
+    .bmi-card {
+        padding: 16px;
+    }
+
+    .bmi-button {
+        width: 100%;
+        justify-self: stretch;
     }
 }
